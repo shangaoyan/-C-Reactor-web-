@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.26)
+project(Second_model)
+aux_source_directory(${PROJECT_SOURCE_DIR} SRC)
+list(REMOVE_ITEM SRC ${PROJECT_SOURCE_DIR}/main.c)
+set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR})
+add_executable(SERVER main.c ${SRC})
